@@ -13,7 +13,7 @@ const Create = () =>{
     const handleSubmit = async(e)=>{
         e.preventDefault();
         const addUser={name,email,age};
-        const response = await fetch("http://localhost:5000/add",{
+        const response = await fetch("https://crud-backend-delta.vercel.app/add",{
             method:"POST",
             body: JSON.stringify(addUser),
             headers:{

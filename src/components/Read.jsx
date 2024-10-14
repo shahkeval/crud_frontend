@@ -4,7 +4,7 @@ const Read = () =>{
     const [data,setData]=useState();
     const [error,setError] = useState("");
     async function getData(){
-        const response = await fetch("http://localhost:5000/show");
+        const response = await fetch("https://crud-backend-delta.vercel.app/show");
         const result = await response.json();
        
        if(!response.ok)
@@ -20,7 +20,7 @@ const Read = () =>{
 
     
     const handleDelete = async (id)=>{
-        const response = await fetch(`http://localhost:5000/delete${id}`,{
+        const response = await fetch(`https://crud-backend-delta.vercel.app/delete${id}`,{
             method : "DELETE"
         });
         console.log("hello");

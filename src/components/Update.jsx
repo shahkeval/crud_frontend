@@ -14,7 +14,7 @@ const Update = () =>{
 
     const getSingleUser = async ()=>{
             
-            const response =await fetch(`http://localhost:5000/showSingle${id}`);
+            const response =await fetch(`https://crud-backend-delta.vercel.app/showSingle${id}`);
             const result = await response.json();
             if(!response.ok)
                 {
@@ -34,7 +34,7 @@ const Update = () =>{
     const handleUpdate = async(e)=>{
         e.preventDefault();
         const updatedUser={name,email,age};
-        const response = await fetch(`http://localhost:5000/update${id}`,{
+        const response = await fetch(`https://crud-backend-delta.vercel.app/update${id}`,{
             method:"PATCH",
             body: JSON.stringify(updatedUser),
             headers:{
